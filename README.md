@@ -1,6 +1,8 @@
 # Polynomial-based Self-Attention for Table Representation Learning (TabPSA)
 
-This is the official implementation for the paper **Polynomial-based Self-Attention for Table Representation Learning**.
+This is the official implementation for the paper [**Polynomial-based Self-Attention for Table Representation Learning**](https://arxiv.org/abs/2312.07753).
+
+📄 Paper: https://arxiv.org/abs/2312.07753
 
 We integrate the polynomial-based self-attention (TabPSA) module into three tabular transformer backbones. Each backbone lives in its own directory with its own environment and entry point:
 
