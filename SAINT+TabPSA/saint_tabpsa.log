@@ -1,0 +1,521 @@
+Device is cuda.
+Downloading and processing the dataset, it might take some time.
+19 256
+Namespace(dataset_name='phishing', runname='saint_tabpsa', task='binary', vision_dset=False, cont_embeddings='MLP', embedding_size=16, transformer_depth=1, attention_heads=4, attention_dropout=0.8, ff_dropout=0.8, attentiontype='colrow', optimizer='Adam', scheduler='cosine', lr=0.005, epochs=100, batchsize=256, savemodelroot='./bestmodels', set_seed=1, dset_seed=5, active_log=False, pretrain=True, pretrain_epochs=100, pt_tasks=['contrastive', 'denoising'], pt_aug=['mixup', 'cutmix'], pt_aug_lam=0.1, mixup_lam=0.3, train_mask_prob=0, mask_prob=0, ssl_avail_y=0, pt_projhead_style='diff', nce_temp=0.7, lam0=0.5, lam1=10, lam2=1, lam3=10, final_mlp_style='sep', polynomial='chebyshev', alpha=10.0, beta=0.3, K=5, dtask='clf')
+Pretraining begins!
+Epoch: 0, Running Loss: 415.2869930267334
+Epoch: 1, Running Loss: 385.73338508605957
+Epoch: 2, Running Loss: 375.79419803619385
+Epoch: 3, Running Loss: 368.11225414276123
+Epoch: 4, Running Loss: 361.98692512512207
+Epoch: 5, Running Loss: 353.7969093322754
+Epoch: 6, Running Loss: 342.15900802612305
+Epoch: 7, Running Loss: 328.42777729034424
+Epoch: 8, Running Loss: 314.45179748535156
+Epoch: 9, Running Loss: 305.7850685119629
+Epoch: 10, Running Loss: 296.5557050704956
+Epoch: 11, Running Loss: 286.79949474334717
+Epoch: 12, Running Loss: 279.5997848510742
+Epoch: 13, Running Loss: 269.89606285095215
+Epoch: 14, Running Loss: 263.9999713897705
+Epoch: 15, Running Loss: 257.1087017059326
+Epoch: 16, Running Loss: 253.39603233337402
+Epoch: 17, Running Loss: 245.38880062103271
+Epoch: 18, Running Loss: 241.34786224365234
+Epoch: 19, Running Loss: 237.8929214477539
+Epoch: 20, Running Loss: 233.70496368408203
+Epoch: 21, Running Loss: 230.9978313446045
+Epoch: 22, Running Loss: 228.60354042053223
+Epoch: 23, Running Loss: 222.33249187469482
+Epoch: 24, Running Loss: 223.7707462310791
+Epoch: 25, Running Loss: 219.88203620910645
+Epoch: 26, Running Loss: 215.18107223510742
+Epoch: 27, Running Loss: 214.11107349395752
+Epoch: 28, Running Loss: 212.96075057983398
+Epoch: 29, Running Loss: 206.98576545715332
+Epoch: 30, Running Loss: 203.99651908874512
+Epoch: 31, Running Loss: 202.81665325164795
+Epoch: 32, Running Loss: 202.43787479400635
+Epoch: 33, Running Loss: 199.03929901123047
+Epoch: 34, Running Loss: 194.86838150024414
+Epoch: 35, Running Loss: 193.7448272705078
+Epoch: 36, Running Loss: 194.3211841583252
+Epoch: 37, Running Loss: 189.13062286376953
+Epoch: 38, Running Loss: 186.89636373519897
+Epoch: 39, Running Loss: 184.19038581848145
+Epoch: 40, Running Loss: 182.6148042678833
+Epoch: 41, Running Loss: 182.25848579406738
+Epoch: 42, Running Loss: 179.98496961593628
+Epoch: 43, Running Loss: 177.94769287109375
+Epoch: 44, Running Loss: 177.80810642242432
+Epoch: 45, Running Loss: 172.67942571640015
+Epoch: 46, Running Loss: 172.04341554641724
+Epoch: 47, Running Loss: 168.62197875976562
+Epoch: 48, Running Loss: 168.09543132781982
+Epoch: 49, Running Loss: 167.86626291275024
+Epoch: 50, Running Loss: 165.92633485794067
+Epoch: 51, Running Loss: 162.78536462783813
+Epoch: 52, Running Loss: 161.7780876159668
+Epoch: 53, Running Loss: 157.95694208145142
+Epoch: 54, Running Loss: 158.6488356590271
+Epoch: 55, Running Loss: 157.05997037887573
+Epoch: 56, Running Loss: 154.28861618041992
+Epoch: 57, Running Loss: 152.7000961303711
+Epoch: 58, Running Loss: 152.69974660873413
+Epoch: 59, Running Loss: 149.16039371490479
+Epoch: 60, Running Loss: 147.77347660064697
+Epoch: 61, Running Loss: 147.6527018547058
+Epoch: 62, Running Loss: 148.05958032608032
+Epoch: 63, Running Loss: 145.7850856781006
+Epoch: 64, Running Loss: 143.9600691795349
+Epoch: 65, Running Loss: 141.49698400497437
+Epoch: 66, Running Loss: 140.56652545928955
+Epoch: 67, Running Loss: 141.6212649345398
+Epoch: 68, Running Loss: 137.41973447799683
+Epoch: 69, Running Loss: 137.56298398971558
+Epoch: 70, Running Loss: 135.1289095878601
+Epoch: 71, Running Loss: 134.96549463272095
+Epoch: 72, Running Loss: 132.89860820770264
+Epoch: 73, Running Loss: 133.67357730865479
+Epoch: 74, Running Loss: 132.54967737197876
+Epoch: 75, Running Loss: 130.94253826141357
+Epoch: 76, Running Loss: 129.14703941345215
+Epoch: 77, Running Loss: 127.16365098953247
+Epoch: 78, Running Loss: 127.4396767616272
+Epoch: 79, Running Loss: 127.28525495529175
+Epoch: 80, Running Loss: 125.3635835647583
+Epoch: 81, Running Loss: 123.99351215362549
+Epoch: 82, Running Loss: 125.0827898979187
+Epoch: 83, Running Loss: 122.79592037200928
+Epoch: 84, Running Loss: 121.58258390426636
+Epoch: 85, Running Loss: 122.73104238510132
+Epoch: 86, Running Loss: 120.36806440353394
+Epoch: 87, Running Loss: 119.20183324813843
+Epoch: 88, Running Loss: 118.57784986495972
+Epoch: 89, Running Loss: 118.12209701538086
+Epoch: 90, Running Loss: 117.62959623336792
+Epoch: 91, Running Loss: 116.05135202407837
+Epoch: 92, Running Loss: 114.50130224227905
+Epoch: 93, Running Loss: 115.91150426864624
+Epoch: 94, Running Loss: 114.50255727767944
+Epoch: 95, Running Loss: 109.77825164794922
+Epoch: 96, Running Loss: 113.04204416275024
+Epoch: 97, Running Loss: 110.90451669692993
+Epoch: 98, Running Loss: 109.12486982345581
+Epoch: 99, Running Loss: 109.12285804748535
+END OF PRETRAINING!
+SAINT(
+  (norm): LayerNorm((3,), eps=1e-05, elementwise_affine=True)
+  (simple_MLP): ModuleList(
+    (0-2): 3 x simple_MLP(
+      (layers): Sequential(
+        (0): Linear(in_features=1, out_features=100, bias=True)
+        (1): SiLU()
+        (2): Linear(in_features=100, out_features=16, bias=True)
+      )
+    )
+  )
+  (transformer): RowColTransformer(
+    (embeds): Embedding(44, 16)
+    (layers): ModuleList(
+      (0): ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+          (fn): Residual(
+            (fn): Attention(
+              (to_qkv): Linear(in_features=16, out_features=192, bias=False)
+              (to_out): Linear(in_features=64, out_features=16, bias=True)
+              (chebnet): PolyConvFrame(
+                (thetas): ParameterList(
+                    (0): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (1): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (2): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (3): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (4): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (5): Parameter containing: [torch.float32 of size  (GPU 0)]
+                )
+              )
+              (dropout): Dropout(p=0.8, inplace=False)
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((16,), eps=1e-05, elementwise_affine=True)
+          (fn): Residual(
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=16, out_features=128, bias=True)
+                (1): GEGLU()
+                (2): Dropout(p=0.8, inplace=False)
+                (3): Linear(in_features=64, out_features=16, bias=True)
+              )
+            )
+          )
+        )
+        (2): PreNorm(
+          (norm): LayerNorm((320,), eps=1e-05, elementwise_affine=True)
+          (fn): Residual(
+            (fn): Attention(
+              (to_qkv): Linear(in_features=320, out_features=768, bias=False)
+              (to_out): Linear(in_features=256, out_features=320, bias=True)
+              (chebnet): PolyConvFrame(
+                (thetas): ParameterList(
+                    (0): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (1): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (2): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (3): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (4): Parameter containing: [torch.float32 of size  (GPU 0)]
+                    (5): Parameter containing: [torch.float32 of size  (GPU 0)]
+                )
+              )
+              (dropout): Dropout(p=0.8, inplace=False)
+            )
+          )
+        )
+        (3): PreNorm(
+          (norm): LayerNorm((320,), eps=1e-05, elementwise_affine=True)
+          (fn): Residual(
+            (fn): FeedForward(
+              (net): Sequential(
+                (0): Linear(in_features=320, out_features=2560, bias=True)
+                (1): GEGLU()
+                (2): Dropout(p=0.8, inplace=False)
+                (3): Linear(in_features=1280, out_features=320, bias=True)
+              )
+            )
+          )
+        )
+      )
+    )
+    (mask_embed): Embedding(20, 16)
+  )
+  (mlp): MLP(
+    (mlp): Sequential(
+      (0): Linear(in_features=320, out_features=160, bias=True)
+      (1): Linear(in_features=160, out_features=80, bias=True)
+      (2): Linear(in_features=80, out_features=1, bias=True)
+    )
+  )
+  (embeds): Embedding(44, 16)
+  (mask_embeds_cat): Embedding(34, 16)
+  (mask_embeds_cont): Embedding(6, 16)
+  (single_mask): Embedding(2, 16)
+  (pos_encodings): Embedding(20, 16)
+  (mlp1): sep_MLP(
+    (layers): ModuleList(
+      (0): simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=1, bias=True)
+        )
+      )
+      (1-5): 5 x simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=2, bias=True)
+        )
+      )
+      (6-14): 9 x simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=3, bias=True)
+        )
+      )
+      (15): simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=2, bias=True)
+        )
+      )
+      (16): simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=4, bias=True)
+        )
+      )
+    )
+  )
+  (mlp2): sep_MLP(
+    (layers): ModuleList(
+      (0-2): 3 x simple_MLP(
+        (layers): Sequential(
+          (0): Linear(in_features=16, out_features=80, bias=True)
+          (1): SiLU()
+          (2): Linear(in_features=80, out_features=1, bias=True)
+        )
+      )
+    )
+  )
+  (mlpfory): simple_MLP(
+    (layers): Sequential(
+      (0): Linear(in_features=16, out_features=16, bias=True)
+      (1): SiLU()
+      (2): Linear(in_features=16, out_features=8, bias=True)
+      (3): SiLU()
+      (4): Linear(in_features=8, out_features=2, bias=True)
+    )
+  )
+  (pt_mlp): simple_MLP(
+    (layers): Sequential(
+      (0): Linear(in_features=320, out_features=384, bias=True)
+      (1): SiLU()
+      (2): Linear(in_features=384, out_features=160, bias=True)
+    )
+  )
+  (pt_mlp2): simple_MLP(
+    (layers): Sequential(
+      (0): Linear(in_features=320, out_features=384, bias=True)
+      (1): SiLU()
+      (2): Linear(in_features=384, out_features=160, bias=True)
+    )
+  )
+)
+The number of model parameters: 2042020
+Training begins now.
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 1] VALID ACCURACY: 78.178, VALID AUROC: 0.841
+[EPOCH 1] TEST ACCURACY: 75.545, TEST AUROC: 0.834
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 6] VALID ACCURACY: 81.025, VALID AUROC: 0.858
+[EPOCH 6] TEST ACCURACY: 79.905, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 11] VALID ACCURACY: 73.055, VALID AUROC: 0.849
+[EPOCH 11] TEST ACCURACY: 77.062, TEST AUROC: 0.849
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 16] VALID ACCURACY: 81.025, VALID AUROC: 0.862
+[EPOCH 16] TEST ACCURACY: 79.526, TEST AUROC: 0.852
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 21] VALID ACCURACY: 77.799, VALID AUROC: 0.858
+[EPOCH 21] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 26] VALID ACCURACY: 79.886, VALID AUROC: 0.852
+[EPOCH 26] TEST ACCURACY: 79.621, TEST AUROC: 0.849
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 31] VALID ACCURACY: 78.558, VALID AUROC: 0.861
+[EPOCH 31] TEST ACCURACY: 79.621, TEST AUROC: 0.843
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 36] VALID ACCURACY: 76.850, VALID AUROC: 0.854
+[EPOCH 36] TEST ACCURACY: 79.052, TEST AUROC: 0.838
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 41] VALID ACCURACY: 81.973, VALID AUROC: 0.858
+[EPOCH 41] TEST ACCURACY: 78.673, TEST AUROC: 0.841
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 46] VALID ACCURACY: 80.455, VALID AUROC: 0.860
+[EPOCH 46] TEST ACCURACY: 80.474, TEST AUROC: 0.852
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 51] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 51] TEST ACCURACY: 79.621, TEST AUROC: 0.851
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 56] VALID ACCURACY: 79.886, VALID AUROC: 0.856
+[EPOCH 56] TEST ACCURACY: 80.758, TEST AUROC: 0.853
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 61] VALID ACCURACY: 80.076, VALID AUROC: 0.854
+[EPOCH 61] TEST ACCURACY: 79.242, TEST AUROC: 0.849
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 66] VALID ACCURACY: 79.127, VALID AUROC: 0.858
+[EPOCH 66] TEST ACCURACY: 79.621, TEST AUROC: 0.852
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 71] VALID ACCURACY: 81.025, VALID AUROC: 0.861
+[EPOCH 71] TEST ACCURACY: 80.379, TEST AUROC: 0.853
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 76] VALID ACCURACY: 79.886, VALID AUROC: 0.847
+[EPOCH 76] TEST ACCURACY: 78.483, TEST AUROC: 0.847
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 81] VALID ACCURACY: 81.594, VALID AUROC: 0.862
+[EPOCH 81] TEST ACCURACY: 79.431, TEST AUROC: 0.853
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 86] VALID ACCURACY: 82.163, VALID AUROC: 0.859
+[EPOCH 86] TEST ACCURACY: 79.621, TEST AUROC: 0.846
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 91] VALID ACCURACY: 81.214, VALID AUROC: 0.860
+[EPOCH 91] TEST ACCURACY: 79.621, TEST AUROC: 0.850
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+[EPOCH 96] VALID ACCURACY: 82.163, VALID AUROC: 0.850
+[EPOCH 96] TEST ACCURACY: 79.526, TEST AUROC: 0.849
+TOTAL NUMBER OF PARAMS: 2042020
+AUROC on best model: 0.8455769121085952

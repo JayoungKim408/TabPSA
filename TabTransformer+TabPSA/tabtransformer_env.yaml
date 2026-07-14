@@ -1,0 +1,17 @@
+name: tabpsa_tabtransformer
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+dependencies:
+  - cudatoolkit=11.7
+  - numpy=1.24.3
+  - python=3.9.7
+  - pytorch=2.0.1
+  - pip=23.1.2=py39h06a4308_0
+  - pip:
+    - scipy==1.11.1
+    - wandb==0.15.10
+    - einops==0.6.1
+    - pandas==2.0.3
+    - scikit-learn==1.3.0

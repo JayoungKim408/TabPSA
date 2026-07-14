@@ -1,0 +1,241 @@
+2024-02-02 09:36:38,456 - Namespace(dataset='phishing', task='binary', output_dir='./output', log_name='phishing_best', seed=0, device='cuda', gpu_id='2', epoch=10000, weight_decay=1e-06, learning_rate=0.005, batch_size=1024, early_stopping_rounds=15, K=3, polynomial='chebyshev', dim=32, depth=6, n_heads=4, hidden_mlp=512, attn_dropout=0.1, ff_dropout=0.1, categ_loss_ratio=0.1, log_path='./output/phishing_best.log', pretrain_checkpoint_path='./output/phishing_best_pretrain.pt', finetune_checkpoint_path='./output/phishing_best_finetune.pt', mlp_checkpoint_path='./output/phishing_best_mlp.pt')
+2024-02-02 09:36:39,498 - TabTransformer_TabPSA(
+  (categ_embed): Embedding(45, 32)
+  (norm): LayerNorm((3,), eps=1e-05, elementwise_affine=True)
+  (transformer): PolyTransformer(
+    (layers): ModuleList(
+      (0-5): 6 x ModuleList(
+        (0): PreNorm(
+          (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+          (fn): PolyAttention(
+            (to_qkv): Linear(in_features=32, out_features=192, bias=False)
+            (to_out): Linear(in_features=64, out_features=32, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (chebnet): PolyConvFrame(
+              (thetas): ParameterList(
+                  (0): Parameter containing: [torch.float32 of size  (GPU 0)]
+                  (1): Parameter containing: [torch.float32 of size  (GPU 0)]
+                  (2): Parameter containing: [torch.float32 of size  (GPU 0)]
+                  (3): Parameter containing: [torch.float32 of size  (GPU 0)]
+              )
+            )
+          )
+        )
+        (1): PreNorm(
+          (norm): LayerNorm((32,), eps=1e-05, elementwise_affine=True)
+          (fn): FeedForward(
+            (net): Sequential(
+              (0): Linear(in_features=32, out_features=256, bias=True)
+              (1): GEGLU()
+              (2): Dropout(p=0.1, inplace=False)
+              (3): Linear(in_features=128, out_features=32, bias=True)
+            )
+          )
+        )
+      )
+    )
+  )
+  (mlp): MLP(
+    (mlp): Sequential(
+      (0): Linear(in_features=515, out_features=256, bias=True)
+      (1): SELU()
+      (2): Linear(in_features=256, out_features=128, bias=True)
+      (3): SELU()
+      (4): Linear(in_features=128, out_features=46, bias=True)
+    )
+  )
+)
+2024-02-02 09:36:39,500 - # params of pretrained model: 297964
+
+2024-02-02 09:36:41,603 - {'epoch': 0, 'train_loss': '14.2793'}
+2024-02-02 09:36:42,078 - Validation score increased.  Saving model ...
+2024-02-02 09:36:43,114 - {'epoch': 1, 'train_loss': '2.3356'}
+2024-02-02 09:36:43,552 - Validation score increased.  Saving model ...
+2024-02-02 09:36:44,501 - {'epoch': 2, 'train_loss': '1.5639'}
+2024-02-02 09:36:44,982 - Validation score increased.  Saving model ...
+2024-02-02 09:36:45,965 - {'epoch': 3, 'train_loss': '1.2877'}
+2024-02-02 09:36:46,370 - Validation score increased.  Saving model ...
+2024-02-02 09:36:47,349 - {'epoch': 4, 'train_loss': '1.1327'}
+2024-02-02 09:36:47,814 - Validation score increased.  Saving model ...
+2024-02-02 09:36:48,809 - {'epoch': 5, 'train_loss': '1.0567'}
+2024-02-02 09:36:49,206 - Validation score increased.  Saving model ...
+2024-02-02 09:36:50,267 - {'epoch': 6, 'train_loss': '1.0209'}
+2024-02-02 09:36:50,668 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:36:51,718 - {'epoch': 7, 'train_loss': '0.9875'}
+2024-02-02 09:36:52,124 - Validation score increased.  Saving model ...
+2024-02-02 09:36:53,178 - {'epoch': 8, 'train_loss': '0.9583'}
+2024-02-02 09:36:53,621 - Validation score increased.  Saving model ...
+2024-02-02 09:36:54,705 - {'epoch': 9, 'train_loss': '0.9454'}
+2024-02-02 09:36:55,109 - Validation score increased.  Saving model ...
+2024-02-02 09:36:56,096 - {'epoch': 10, 'train_loss': '0.9454'}
+2024-02-02 09:36:56,524 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:36:57,557 - {'epoch': 11, 'train_loss': '0.9174'}
+2024-02-02 09:36:58,057 - Validation score increased.  Saving model ...
+2024-02-02 09:36:59,086 - {'epoch': 12, 'train_loss': '0.9230'}
+2024-02-02 09:36:59,512 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:00,598 - {'epoch': 13, 'train_loss': '0.9120'}
+2024-02-02 09:37:01,053 - Validation score increased.  Saving model ...
+2024-02-02 09:37:02,075 - {'epoch': 14, 'train_loss': '0.8976'}
+2024-02-02 09:37:02,503 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:03,582 - {'epoch': 15, 'train_loss': '0.9044'}
+2024-02-02 09:37:03,970 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:37:05,000 - {'epoch': 16, 'train_loss': '0.8955'}
+2024-02-02 09:37:05,403 - Validation score increased.  Saving model ...
+2024-02-02 09:37:06,433 - {'epoch': 17, 'train_loss': '0.8937'}
+2024-02-02 09:37:06,838 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:07,758 - {'epoch': 18, 'train_loss': '0.8903'}
+2024-02-02 09:37:08,197 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:37:09,135 - {'epoch': 19, 'train_loss': '0.8908'}
+2024-02-02 09:37:09,538 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:37:10,537 - {'epoch': 20, 'train_loss': '0.8810'}
+2024-02-02 09:37:10,934 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:37:11,993 - {'epoch': 21, 'train_loss': '0.8768'}
+2024-02-02 09:37:12,425 - EarlyStopping counter: 5 out of 15
+2024-02-02 09:37:13,469 - {'epoch': 22, 'train_loss': '0.8881'}
+2024-02-02 09:37:13,873 - EarlyStopping counter: 6 out of 15
+2024-02-02 09:37:14,805 - {'epoch': 23, 'train_loss': '0.8789'}
+2024-02-02 09:37:15,281 - Validation score increased.  Saving model ...
+2024-02-02 09:37:16,244 - {'epoch': 24, 'train_loss': '0.8734'}
+2024-02-02 09:37:16,658 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:17,761 - {'epoch': 25, 'train_loss': '0.8755'}
+2024-02-02 09:37:18,249 - Validation score increased.  Saving model ...
+2024-02-02 09:37:19,257 - {'epoch': 26, 'train_loss': '0.8749'}
+2024-02-02 09:37:19,685 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:20,768 - {'epoch': 27, 'train_loss': '0.8764'}
+2024-02-02 09:37:21,184 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:37:22,196 - {'epoch': 28, 'train_loss': '0.8779'}
+2024-02-02 09:37:22,602 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:37:23,648 - {'epoch': 29, 'train_loss': '0.8789'}
+2024-02-02 09:37:24,083 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:37:25,161 - {'epoch': 30, 'train_loss': '0.8677'}
+2024-02-02 09:37:25,631 - EarlyStopping counter: 5 out of 15
+2024-02-02 09:37:26,667 - {'epoch': 31, 'train_loss': '0.8749'}
+2024-02-02 09:37:27,074 - EarlyStopping counter: 6 out of 15
+2024-02-02 09:37:28,072 - {'epoch': 32, 'train_loss': '0.8737'}
+2024-02-02 09:37:28,491 - EarlyStopping counter: 7 out of 15
+2024-02-02 09:37:29,561 - {'epoch': 33, 'train_loss': '0.8690'}
+2024-02-02 09:37:30,035 - EarlyStopping counter: 8 out of 15
+2024-02-02 09:37:31,009 - {'epoch': 34, 'train_loss': '0.8753'}
+2024-02-02 09:37:31,392 - EarlyStopping counter: 9 out of 15
+2024-02-02 09:37:32,476 - {'epoch': 35, 'train_loss': '0.8820'}
+2024-02-02 09:37:32,884 - EarlyStopping counter: 10 out of 15
+2024-02-02 09:37:33,891 - {'epoch': 36, 'train_loss': '0.8718'}
+2024-02-02 09:37:34,273 - EarlyStopping counter: 11 out of 15
+2024-02-02 09:37:35,352 - {'epoch': 37, 'train_loss': '0.8650'}
+2024-02-02 09:37:35,759 - EarlyStopping counter: 12 out of 15
+2024-02-02 09:37:36,695 - {'epoch': 38, 'train_loss': '0.8677'}
+2024-02-02 09:37:37,087 - Validation score increased.  Saving model ...
+2024-02-02 09:37:38,080 - {'epoch': 39, 'train_loss': '0.8701'}
+2024-02-02 09:37:38,473 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:37:39,444 - {'epoch': 40, 'train_loss': '0.8755'}
+2024-02-02 09:37:39,867 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:37:40,860 - {'epoch': 41, 'train_loss': '0.8673'}
+2024-02-02 09:37:41,230 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:37:42,329 - {'epoch': 42, 'train_loss': '0.8670'}
+2024-02-02 09:37:42,729 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:37:43,742 - {'epoch': 43, 'train_loss': '0.8721'}
+2024-02-02 09:37:44,143 - EarlyStopping counter: 5 out of 15
+2024-02-02 09:37:45,207 - {'epoch': 44, 'train_loss': '0.8668'}
+2024-02-02 09:37:45,624 - EarlyStopping counter: 6 out of 15
+2024-02-02 09:37:46,621 - {'epoch': 45, 'train_loss': '0.8666'}
+2024-02-02 09:37:47,013 - EarlyStopping counter: 7 out of 15
+2024-02-02 09:37:48,012 - {'epoch': 46, 'train_loss': '0.8629'}
+2024-02-02 09:37:48,405 - EarlyStopping counter: 8 out of 15
+2024-02-02 09:37:49,469 - {'epoch': 47, 'train_loss': '0.8711'}
+2024-02-02 09:37:49,946 - EarlyStopping counter: 9 out of 15
+2024-02-02 09:37:50,916 - {'epoch': 48, 'train_loss': '0.8578'}
+2024-02-02 09:37:51,387 - EarlyStopping counter: 10 out of 15
+2024-02-02 09:37:52,405 - {'epoch': 49, 'train_loss': '0.8562'}
+2024-02-02 09:37:52,877 - EarlyStopping counter: 11 out of 15
+2024-02-02 09:37:53,852 - {'epoch': 50, 'train_loss': '0.8703'}
+2024-02-02 09:37:54,248 - EarlyStopping counter: 12 out of 15
+2024-02-02 09:37:55,432 - {'epoch': 51, 'train_loss': '0.8632'}
+2024-02-02 09:37:55,848 - EarlyStopping counter: 13 out of 15
+2024-02-02 09:37:56,868 - {'epoch': 52, 'train_loss': '0.8619'}
+2024-02-02 09:37:57,346 - EarlyStopping counter: 14 out of 15
+2024-02-02 09:37:58,292 - {'epoch': 53, 'train_loss': '0.8592'}
+2024-02-02 09:37:58,760 - EarlyStopping counter: 15 out of 15
+2024-02-02 09:37:58,761 - Early stopping
+2024-02-02 09:37:58,795 - MLP(
+  (mlp): Sequential(
+    (0): Linear(in_features=515, out_features=512, bias=True)
+    (1): SELU()
+    (2): Linear(in_features=512, out_features=512, bias=True)
+    (3): SELU()
+    (4): Linear(in_features=512, out_features=2, bias=True)
+  )
+)
+2024-02-02 09:37:58,795 - # params of mlp model: 527874
+
+2024-02-02 09:37:58,810 - Load best pretrained model from ./output/phishing_best_pretrain.pt
+2024-02-02 09:37:58,810 - Start finetuning mlp model
+2024-02-02 09:37:59,738 - {'epoch': 0, 'train_loss': '5.6169'}
+2024-02-02 09:38:00,143 - Validation score increased.  Saving model ...
+2024-02-02 09:38:01,074 - {'epoch': 1, 'train_loss': '1.1169'}
+2024-02-02 09:38:01,502 - Validation score increased.  Saving model ...
+2024-02-02 09:38:02,516 - {'epoch': 2, 'train_loss': '0.6365'}
+2024-02-02 09:38:02,941 - Validation score increased.  Saving model ...
+2024-02-02 09:38:03,878 - {'epoch': 3, 'train_loss': '0.4831'}
+2024-02-02 09:38:04,329 - Validation score increased.  Saving model ...
+2024-02-02 09:38:05,383 - {'epoch': 4, 'train_loss': '0.4486'}
+2024-02-02 09:38:05,794 - Validation score increased.  Saving model ...
+2024-02-02 09:38:06,739 - {'epoch': 5, 'train_loss': '0.4316'}
+2024-02-02 09:38:07,118 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:38:08,185 - {'epoch': 6, 'train_loss': '0.4438'}
+2024-02-02 09:38:08,662 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:38:09,614 - {'epoch': 7, 'train_loss': '0.4357'}
+2024-02-02 09:38:10,075 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:38:10,998 - {'epoch': 8, 'train_loss': '0.4345'}
+2024-02-02 09:38:11,377 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:38:12,288 - {'epoch': 9, 'train_loss': '0.4352'}
+2024-02-02 09:38:12,683 - Validation score increased.  Saving model ...
+2024-02-02 09:38:13,629 - {'epoch': 10, 'train_loss': '0.4367'}
+2024-02-02 09:38:14,002 - Validation score increased.  Saving model ...
+2024-02-02 09:38:14,914 - {'epoch': 11, 'train_loss': '0.4246'}
+2024-02-02 09:38:15,302 - Validation score increased.  Saving model ...
+2024-02-02 09:38:16,329 - {'epoch': 12, 'train_loss': '0.4202'}
+2024-02-02 09:38:16,739 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:38:17,717 - {'epoch': 13, 'train_loss': '0.4148'}
+2024-02-02 09:38:18,103 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:38:19,018 - {'epoch': 14, 'train_loss': '0.4256'}
+2024-02-02 09:38:19,431 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:38:20,343 - {'epoch': 15, 'train_loss': '0.4202'}
+2024-02-02 09:38:20,726 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:38:21,618 - {'epoch': 16, 'train_loss': '0.4347'}
+2024-02-02 09:38:22,017 - EarlyStopping counter: 5 out of 15
+2024-02-02 09:38:22,895 - {'epoch': 17, 'train_loss': '0.4344'}
+2024-02-02 09:38:23,291 - Validation score increased.  Saving model ...
+2024-02-02 09:38:24,240 - {'epoch': 18, 'train_loss': '0.4383'}
+2024-02-02 09:38:24,662 - EarlyStopping counter: 1 out of 15
+2024-02-02 09:38:25,706 - {'epoch': 19, 'train_loss': '0.4393'}
+2024-02-02 09:38:26,107 - EarlyStopping counter: 2 out of 15
+2024-02-02 09:38:27,108 - {'epoch': 20, 'train_loss': '0.4277'}
+2024-02-02 09:38:27,520 - EarlyStopping counter: 3 out of 15
+2024-02-02 09:38:28,457 - {'epoch': 21, 'train_loss': '0.4248'}
+2024-02-02 09:38:28,844 - EarlyStopping counter: 4 out of 15
+2024-02-02 09:38:29,846 - {'epoch': 22, 'train_loss': '0.4259'}
+2024-02-02 09:38:30,285 - EarlyStopping counter: 5 out of 15
+2024-02-02 09:38:31,282 - {'epoch': 23, 'train_loss': '0.4238'}
+2024-02-02 09:38:31,717 - EarlyStopping counter: 6 out of 15
+2024-02-02 09:38:32,736 - {'epoch': 24, 'train_loss': '0.4173'}
+2024-02-02 09:38:33,134 - EarlyStopping counter: 7 out of 15
+2024-02-02 09:38:34,137 - {'epoch': 25, 'train_loss': '0.4250'}
+2024-02-02 09:38:34,545 - EarlyStopping counter: 8 out of 15
+2024-02-02 09:38:35,572 - {'epoch': 26, 'train_loss': '0.4116'}
+2024-02-02 09:38:35,997 - EarlyStopping counter: 9 out of 15
+2024-02-02 09:38:36,917 - {'epoch': 27, 'train_loss': '0.4175'}
+2024-02-02 09:38:37,324 - EarlyStopping counter: 10 out of 15
+2024-02-02 09:38:38,409 - {'epoch': 28, 'train_loss': '0.4184'}
+2024-02-02 09:38:38,812 - EarlyStopping counter: 11 out of 15
+2024-02-02 09:38:39,719 - {'epoch': 29, 'train_loss': '0.4179'}
+2024-02-02 09:38:40,167 - EarlyStopping counter: 12 out of 15
+2024-02-02 09:38:41,077 - {'epoch': 30, 'train_loss': '0.4170'}
+2024-02-02 09:38:41,539 - EarlyStopping counter: 13 out of 15
+2024-02-02 09:38:42,535 - {'epoch': 31, 'train_loss': '0.4169'}
+2024-02-02 09:38:42,936 - EarlyStopping counter: 14 out of 15
+2024-02-02 09:38:43,918 - {'epoch': 32, 'train_loss': '0.4093'}
+2024-02-02 09:38:44,319 - EarlyStopping counter: 15 out of 15
+2024-02-02 09:38:44,319 - Early stopping
+2024-02-02 09:38:44,352 - Load best pretrained model from ./output/phishing_best_finetune.pt
+2024-02-02 09:38:44,355 - Load best mlp model from ./output/phishing_best_mlp.pt
+2024-02-02 09:38:44,864 - Test Result = Accuracy: [0.7800947867298578], ROC_AUC: [0.8481625125952965]
